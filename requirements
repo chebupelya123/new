@@ -1,0 +1,6 @@
+langchain
+langchain-core
+langchain-groq>=0.3.8
+langgraph
+python-dotenv
+pydantic

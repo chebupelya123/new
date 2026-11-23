@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>GROQ</title>
+</head>
+
+<body>
+
+<div class="app-container">
+
+
+<header class="topbar">
+    <a href="/" class="logo">
+        <span class="logo-icon">
+            <span class="logo-symbol"></span>
+        </span>
+
+        <span class="logo-name">
+            GROQ<span class="logo-accent">.help</span>
+        </span>
+    </a>
+
+    <nav class="top-navigation">
+        <a href="/" class="nav-link active">
+            Рабочая область
+        </a>
+
+        <div class="history-wrapper">
+            <button
+                type="button"
+                class="nav-history-button"
+                id="history-button"
+            >
+                История
+                <span class="history-arrow">⌄</span>
+            </button>
+
+            <div id="project-history" class="project-history"></div>
+        </div>
+    </nav>
+
+    <div class="topbar-right">
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            AI SYSTEM ONLINE
+        </div>
+    </div>
+</header>
+
+
+
+    <!-- Основная область -->
+    <main class="main-content">
+
+        <section class="workspace">
+
+            <!-- Главный экран -->
+            <section class="welcome-section">
+
+                <div class="welcome-label">
+                    <span>✦</span>
+                    YOUR PERSONAL AI PROJECT STUDIO
+                </div>
+
+                <div class="hero-content">
+
+                    <div class="hero-text">
+
+                        <h1>
+                            Большие проекты
+                            <span>начинаются с идеи.</span>
+                        </h1>
+
+                        <p class="welcome-description">
+                            Расскажите, что хотите создать.
+                            Ваш AI-помощник проанализирует идею,
+                            уточнит требования и превратит её
+                            в полноценное техническое задание.
+                        </p>
+
+                    </div>
+
+                    <div class="hero-decoration">
+
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+                        <div class="orbit orbit-three"></div>
+
+                        <div class="orbit-core">
+                            <span>AI</span>
+                        </div>
+
+                        <div class="orbit-caption">
+                            INTELLIGENCE<br>
+                            ENGINE
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Этапы работы -->
+                <div class="hero-stats">
+
+                    <div class="hero-stat">
+                        <span class="stat-icon">01</span>
+                        <div>
+                            <strong>Анализ идеи</strong>
+                            <small>Проверка требований</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-stat">
+                        <span class="stat-icon">02</span>
+                        <div>
+                            <strong>Диалог с AI</strong>
+                            <small>Уточнение деталей</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-stat">
+                        <span class="stat-icon">03</span>
+                        <div>
+                            <strong>Готовое ТЗ</strong>
+                            <small>Документ проекта</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Центральная рабочая зона -->
+            <section class="studio-layout">
+
+                <!-- Форма создания проекта -->
+                <div class="project-card">
+
+                    <div class="card-header">
+
+                        <div class="card-heading">
+
+                            <div class="card-overline">
+                                START YOUR PROJECT
+                            </div>
+
+                            <h2>Что будем создавать?</h2>
+
+                            <p>
+                                Опишите свою идею простыми словами.
+                                Технические детали можно уточнить позже.
+                            </p>
+
+                        </div>
+
+                        <div class="step-number">01</div>
+
+                    </div>
+
+
+                    <div class="textarea-wrapper">
+
+                        <div class="textarea-label">
+                            <span class="textarea-label-icon">✎</span>
+                            ОПИСАНИЕ ПРОЕКТА
+                        </div>
+
+                        <textarea
+                            id="project-description"
+                            placeholder="Например: хочу создать интернет-магазин с регистрацией пользователей, каталогом товаров, корзиной и системой оформления заказов..."
+                        ></textarea>
+
+                        <div class="textarea-bottom">
+                            <span>✦ AI поможет уточнить требования</span>
+                            <span>Опишите идею максимально понятно</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-footer">
+
+                        <span class="input-hint">
+                            Начните с идеи — остальное сделаем вместе
+                        </span>
+
+                        <button id="start-button">
+                            <span>Запустить AI-анализ</span>
+                            <span>↗</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Плавающая информационная панель -->
+                <aside class="studio-info">
+
+                    <div class="info-card">
+
+                        <div class="info-card-top">
+                            <span class="info-icon">✧</span>
+                            <span class="info-label">AI ENGINE</span>
+                        </div>
+
+                        <h3>От идеи до результата</h3>
+
+                        <p>
+                            AI проверит полноту требований,
+                            найдёт недостающую информацию
+                            и поможет подготовить проект к разработке.
+                        </p>
+
+                        <div class="engine-status">
+                            <span class="status-dot"></span>
+                            <span>Система готова</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="workflow-card">
+
+                        <div class="workflow-heading">
+                            <span>WORKFLOW</span>
+                            <span class="workflow-indicator">3 ЭТАПА</span>
+                        </div>
+
+                        <div class="workflow-step">
+                            <div class="workflow-number">01</div>
+                            <div>
+                                <strong>Анализ требований</strong>
+                                <small>Изучение вашей идеи</small>
+                            </div>
+                        </div>
+
+                        <div class="workflow-connector"></div>
+
+                        <div class="workflow-step">
+                            <div class="workflow-number">02</div>
+                            <div>
+                                <strong>Уточнение деталей</strong>
+                                <small>Вопросы от AI</small>
+                            </div>
+                        </div>
+
+                        <div class="workflow-connector"></div>
+
+                        <div class="workflow-step">
+                            <div class="workflow-number">03</div>
+                            <div>
+                                <strong>Создание ТЗ</strong>
+                                <small>Готовая спецификация</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </section>
+
+
+            <!-- Результаты анализа и вопросы -->
+            <section
+                id="result-section"
+                class="result-section hidden"
+            >
+            </section>
+
+
+            <!-- Нижняя часть -->
+            <footer class="bottom-note">
+
+                <span>✦</span>
+                <span>POWERED BY AI</span>
+                <span class="footer-divider">·</span>
+                <span>LANGGRAPH</span>
+                <span class="footer-divider">·</span>
+                <span>GROQ</span>
+
+                <span class="footer-copyright">
+                    PROJECT.AI STUDIO
+                </span>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>

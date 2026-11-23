@@ -1,0 +1,249 @@
+
+/* =========================================
+   PROJECT HISTORY
+========================================= */
+
+.project-history {
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 340px;
+    max-width: 85vw;
+    max-height: 420px;
+
+    overflow-y: auto;
+    padding: 14px;
+
+    background: rgba(10, 17, 35, 0.97);
+    border: 1px solid rgba(91, 141, 255, 0.25);
+    border-radius: 16px;
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(45, 105, 255, 0.08);
+
+    z-index: 100;
+}
+
+.project-history:empty {
+    display: none;
+}
+
+/* Заголовок истории */
+
+.project-history h3,
+.project-history h4 {
+    color: #eaf1ff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 4px 6px 14px;
+}
+
+/* Элемент проекта */
+
+.project-history-item,
+.history-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    padding: 13px;
+    margin-bottom: 9px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-history-item:hover,
+.history-item:hover {
+    background: rgba(54, 112, 255, 0.12);
+    border-color: rgba(83, 145, 255, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Название проекта */
+
+.project-history-item h3,
+.project-history-item h4,
+.history-item h3,
+.history-item h4 {
+    color: #e8efff;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Дополнительная информация */
+
+.project-history-item p,
+.history-item p {
+    color: #8293b5;
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Кнопки внутри истории */
+
+.project-history button,
+.history-item button {
+    padding: 8px 11px;
+
+    color: #bcd0ff;
+    background: rgba(60, 113, 255, 0.12);
+
+    border: 1px solid rgba(80, 135, 255, 0.2);
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.project-history button:hover,
+.history-item button:hover {
+    color: #ffffff;
+    background: rgba(60, 113, 255, 0.3);
+    border-color: rgba(100, 155, 255, 0.55);
+}
+
+/* Скролл истории */
+
+.project-history::-webkit-scrollbar {
+    width: 5px;
+}
+
+.project-history::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-history::-webkit-scrollbar-thumb {
+    background: rgba(90, 130, 210, 0.4);
+    border-radius: 10px;
+}
+
+.project-history::-webkit-scrollbar-thumb:hover {
+    background: rgba(110, 155, 255, 0.65);
+}
+
+/* Адаптация для мобильных устройств */
+
+@media (max-width: 600px) {
+    .project-history {
+        position: fixed;
+        top: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100vw - 30px);
+        max-width: 400px;
+    }
+}
+/* Карточки проектов в истории */
+
+.history-project {
+    position: relative;
+    z-index: 101;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    padding: 13px;
+    margin-bottom: 9px;
+
+    cursor: pointer;
+    pointer-events: auto;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+
+    transition: all 0.2s ease;
+}
+
+.history-project:hover {
+    background: rgba(54, 112, 255, 0.15);
+    border-color: rgba(83, 145, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.history-project-title {
+    color: #e8efff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.history-project-status,
+.history-project-date {
+    color: #8293b5;
+    font-size: 11px;
+}
+
+/* =====================================
+   HISTORY HOVER MENU
+===================================== */
+
+/* Контейнер навигации */
+
+.history-wrapper {
+    position: relative;
+}
+
+/* Скрытое состояние списка */
+
+.history-wrapper .project-history {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translate(-50%, 10px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+/* Появление списка при наведении */
+
+.history-wrapper:hover .project-history,
+.history-wrapper:focus-within .project-history {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+
+    transform: translate(-50%, 0);
+}
+
+/* Пункт История */
+
+.nav-history-button {
+    cursor: pointer;
+}
+
+/* Подсветка выбранного проекта при наведении */
+
+.history-project {
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.history-project:hover {
+    background: rgba(54, 112, 255, 0.15);
+    border-color: rgba(83, 145, 255, 0.4);
+}

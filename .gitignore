@@ -1,0 +1,31 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Generated files
+*.log
+*.tmp
+
+# Python test/cache
+.pytest_cache/
+.mypy_cache/
+
+# Generated documents
+exports/
+output/
